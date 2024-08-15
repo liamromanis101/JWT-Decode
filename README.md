@@ -21,7 +21,7 @@ Token Analysis Function (analyze_token):
 	•	role (Role): Lists the roles assigned to the token bearer. This could define what actions the bearer can perform.  
 
 # JWT-Recode
-Creates a new JWT token from an existing one. 
+Creates a new JWT token from an existing one adding in values for iss, sub, aud, scope and role.  
 
 ## Usage
 
@@ -36,4 +36,22 @@ pip install argparse sys PyJWT datetime
 ## Description
 This script will create a new JWT token from an existing one and change or add in values for iss, sub, aud, scope and role.   
 
-For example, you may want to change the role to allow access to other services or change the role to 'admin'.   
+For example, you may want to change the role to allow access to other services or change the role to 'admin'. 
+
+# JWT-Crack
+Uses a dictionary to crack JWT signatures generated with HS256, HS384 and HS512 algorithms. 
+
+## Usage
+
+python3 jwt-crack.py <jwt_token> <path_to_dictionary_file>  
+
+## Requirements
+
+pip install base64 hashlib hmac jwt argparse json sys  
+
+## Description
+This script can be used to crack the signatures of JWT tokens generated using HS256, HS384 and HS512 algorithms. The script will pad the values taken from the dictionary up to the length required by each algorithm:  
+
+HS256: 32 Bytes  
+HS384: 48 Bytes  
+HS512: 64 Bytes  
