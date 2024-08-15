@@ -20,3 +20,20 @@ Token Analysis Function (analyze_token):
 	•	scope (Scope): Defines the permissions or access level granted by the token. This is usually a space-separated list of strings.  
 	•	role (Role): Lists the roles assigned to the token bearer. This could define what actions the bearer can perform.  
 
+# JWT-Recode
+Creates a new JWT token from an existing one. 
+
+## Usage
+
+python3 jwt-recode.py <your_jwt_token>  
+or  
+python3 jwt-recode.py <your_jwt_token> --secret <your_secret_key>  
+
+## Requirements
+Python3  
+pip install argparse sys PyJWT datetime
+
+## Description
+This script will create a new JWT token from an existing one and change or add in values for iss, sub, aud, scope and role.   
+
+For example, you may want to change the role to allow access to other services or change the role to 'admin'.   
