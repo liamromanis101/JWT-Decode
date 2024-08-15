@@ -55,3 +55,19 @@ This script can be used to crack the signatures of JWT tokens generated using HS
 HS256: 32 Bytes  
 HS384: 48 Bytes  
 HS512: 64 Bytes  
+
+# JWT-Gen
+Usful for testing purposes as you will known the value of the secret. 
+
+## Usage
+
+python3 jwt-gen.py <json_jwt_content> <secret> <algorithm>  
+
+i.e. python3 jwt-gen.py '{"sub": "1234567890", "name": "John Doe", "iat": 1516239022}' 'password1' HS256  
+
+## Requirements 
+
+pip install base64 hashlib hmac jwt argparse json
+
+## Description
+Simple script for creating example jwt tokens with signatures created with a known secret for testing the other scripts. 
