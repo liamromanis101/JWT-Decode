@@ -2,7 +2,7 @@
 Decodes JWT tokens and performs some analysis on the decoded values. 
 
 ## Usage
-python3 decode_jwt.py your_jwt_token_here
+python3 decode_jwt.py your_jwt_token_here\n
 or
 python3 decode_jwt.py your_jwt_token_here --secret your_secret_key_here
 
