@@ -70,4 +70,6 @@ i.e. python3 jwt-gen.py '{"sub": "1234567890", "name": "John Doe", "iat": 151623
 pip install base64 hashlib hmac jwt argparse json
 
 ## Description
-Simple script for creating example jwt tokens with signatures created with a known secret for testing the other scripts. 
+Simple script for creating example jwt tokens with signatures created with a known secret for testing the other scripts.  
+
+Currently this script is not producing 100% valid JWT tokens, working on it. 
